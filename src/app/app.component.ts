@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticatorService, Role, RoleType, User } from 'my-authenticator-lib';
+import myJson from '../assets/config.json';
+import { LoginConfig } from './login.config';
+
 
 @Component({
   selector: 'app-root',
@@ -10,8 +13,9 @@ import { AuthenticatorService, Role, RoleType, User } from 'my-authenticator-lib
 export class AppComponent {
   
   constructor(private authenticatorService: AuthenticatorService,
-              private router: Router) {
-
+              private router: Router) {                 
+      let config: LoginConfig = myJson;
+      console.log(config);
   }
 
   public loginAsAdmin() {

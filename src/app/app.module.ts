@@ -20,7 +20,10 @@ import { LoginComponent } from './login/login.component';
     AuthenticatorModule,
     ...MaterialModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
+
+
